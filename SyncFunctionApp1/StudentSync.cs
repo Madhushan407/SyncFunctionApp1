@@ -14,7 +14,7 @@ namespace SyncFunctionApp1
         }
 
         [Function("StudentSync")]
-        public void Run([TimerTrigger("0 */1 * * * *", RunOnStartup =true)] TimerInfo myTimer)
+        public void Run([TimerTrigger("%StudentSyncTimmerTrigger%", RunOnStartup =true)] TimerInfo myTimer)
         {
             _logger.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
             
